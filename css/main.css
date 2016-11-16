@@ -160,9 +160,8 @@ ul.nav-tabs > li > a:hover{
     padding: 15px;
 }
 
-#msg-about>p::before{ 
-  content: "«";
-  font-size: 36px;
+.lead{
+    text-align: justify;
 }
 
 /* PAGE CONTACT */
@@ -367,12 +366,15 @@ ul.nav-tabs > li > a:hover{
   font-family:Khula;
   font-size:3.5em;
   height: 50px;
-  width:600px;
   display:block;
   color:white;
+  margin-bottom:20px;
+  text-shadow: 1px 1px 1px black;
 }
 .console-underscore {
-    display: block;
+  display:inline-block;
+  position:relative;
   top:-0.14em;
   left:10px;
+  color: black;
 } 
