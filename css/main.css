@@ -132,13 +132,14 @@ ul.nav-tabs > li > a:hover{
     font-size:20px;
     color: black;
     font-family: Helvetica;
+    background-color: #e7e7e7;
 }
 
 .fa-arrow-circle-right{
     font-size: 56px;
     color: black;
     margin-left:0.2em;
-    margin-top: 200px;
+    margin-top: 75%;
 }
 
 #error-title{
