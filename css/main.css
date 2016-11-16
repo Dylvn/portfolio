@@ -99,10 +99,6 @@ body{
     background: url('../img/background.jpg');
 }
 
-ul.nav-tabs > li{
-    margin-left:35px;
-}
-
 ul.nav-tabs{
     margin:none;
 }
