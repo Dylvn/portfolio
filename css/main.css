@@ -355,3 +355,24 @@ ul.nav-tabs > li > a:hover{
         page-break-after: avoid;
     }
 }
+
+/* =====================================================
+                        CODEPEN.IO 
+    ==================================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+.console-container {
+ 
+  font-family:Khula;
+  font-size:3.5em;
+  height: 50px;
+  width:600px;
+  display:block;
+  color:white;
+}
+.console-underscore {
+    display: block;
+  top:-0.14em;
+  left:10px;
+} 
