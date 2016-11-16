@@ -146,6 +146,25 @@ ul.nav-tabs > li > a:hover{
     margin-top:80px;
 }
 
+/* PAGE ABOUT */
+
+#body-page{
+    margin-top:80px;
+}
+
+#msg-about{
+    background-color:white;
+    opacity: 0.8;
+    box-shadow: 1px 1px 1px #e7e7e7;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#msg-about>p::before{ 
+  content: "«";
+  font-size: 36px;
+}
+
 
 
 
