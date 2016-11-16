@@ -160,7 +160,7 @@ ul.nav-tabs > li > a:hover{
     padding: 15px;
 }
 
-.lead{
+p.lead{
     text-align: justify;
 }
 
@@ -172,6 +172,21 @@ ul.nav-tabs > li > a:hover{
     box-shadow: 1px 1px 1px #e7e7e7;
     border-radius: 5px;
     padding: 15px;
+}
+
+/* FORMATIONS */
+
+#formation{
+    margin-top:80px;
+    background-color:white;
+    opacity: 0.8;
+    box-shadow: 1px 1px 1px #e7e7e7;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#formation>div{
+    border: 1px solid black;
 }
 
 
