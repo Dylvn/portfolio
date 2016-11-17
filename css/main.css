@@ -209,11 +209,11 @@ ul>li>span{
 
 /* PROJECTS */
 
-#projectsRow1{
+#projectsRow, #skillsRow{
     margin-top:80px;
 }
 
-#portfoliov1{
+/*portfoliov1{
     background-image: url('../img/portfoliov1.jpg');
     background-size: 552px 345px;
     width: 552px;
@@ -222,7 +222,7 @@ ul>li>span{
 
 #blogRuby{
     background-image: url('../img/blogRuby.jpg');
-    background-size: 552px 345px;
+    background-size: cover;
     width: 552px;
     height: 345px;
 }
@@ -232,22 +232,59 @@ ul>li>span{
     background-size: 552px 345px;
     width: 552px;
     height: 345px;
-}
+} */
 
 #projectsRow1 :nth-child(1):hover{ 
-    transition-duration:1s;
+    transition-duration:2s;
     border-radius: 50%;
 }
 
 #projectsRow1 :nth-child(2):hover{
-    transition-duration:1s;
+    transition-duration:2s;
     border-radius: 50%;
 }
 
+#projectsRow>div>h1, #skillsRow>div>h1{
+    background-color:white;
+    opacity: 0.8;
+    border: 1px solid #e7e7e7;
+    box-shadow: 1px 1px 1px #e7e7e7;
+    border-radius:5px;
+    display:inline;
+    font-family: impact;
+    font-size: 36px;
+}
+
+#projectsRow>div{
+    margin-bottom:20px;
+}
+
 #projectsRow2 :nth-child(1):hover{
-    transition-duration:1s;
+    transition-duration:2s;
     border-radius: 50%;
 }
+
+/* SKILLS */
+
+#skillsRow1>div{
+    margin-top: 20px;
+    background-color:white;
+    opacity: 0.8;
+    border-radius:5px;
+}
+
+#skillsRow1>div>h2{
+    font-size:28px;
+    font-family: impact;
+    text-shadow: 5px 1px 1px #e7e7e7;
+    text-decoration: underline;
+}
+
+.progress-bar{
+    font-size:18px;
+    font-family: Helvetica;
+}
+
 
 
 
