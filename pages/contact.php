@@ -1,3 +1,38 @@
+<?php
+    if(isset($_POST['submit'])){
+
+        extract($_POST);
+        $errors = [];
+
+        if(empty($name)){
+            $errors[] = 'Votre nom doit être complété'; 
+        }
+
+        if(empty($email)){
+            $errors[] = 'Votre email doit être complété';
+        }
+
+        if(empty($message)){
+            $errors[] = 'Votre message doit être complété';
+        }
+
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $errors[] = 'Votre email doit être valide';
+        }
+
+        if(empty($errors)){
+            $to = 'postmaster@trochain-dylan.fr';
+            $subject = 'PORTFOLIO - '. $name .' from '.$email;
+
+            mail($to, $subject, $message);
+
+        }
+
+    }
+
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="fr">
     <head>
@@ -9,6 +44,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+                <link rel="icon" href="../favicon.ico">
         <!-- Place favicon.ico in the root directory -->
 
         <!-- CSS -->
@@ -36,14 +72,28 @@
                             <li><a data-toggle="tab" href="formation.html">Formation</a></li>
                             <li><a data-toggle="tab" href="projects.html">Projects</a></li>
                             <li><a data-toggle="tab" href="skills.html">Skills</a></li>
-                            <li class="active"><a data-toggle="tab" href="contact.html">Contact</a></li>
+                            <li class="active"><a data-toggle="tab" href="contact.php">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <div class="container" id="contact-page">
+
+            <div class="container" id="contact-page">
+                <?php if(!empty($errors)) : ?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <?php foreach($errors as $error) : ?>
+                                    <p><?= $error; ?></p>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            <div class="container" id="contact-page">
             <!-- CONTENT -->
             <div class="row">
                 <div class="col-md-5">
@@ -52,7 +102,7 @@
                 </div>
                 <div class="col-md-7" id="form-contact">
                     <h2 class="text-center">Formulaire de contact</h2>
-                    <form action="">
+                    <form action="" method="post">
                         <label for="name">Votre nom :</label>
                         <input type="text" class="form-control" name="name" id="name">
                         <label for="email">Votre Email</label>
