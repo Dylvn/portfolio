@@ -5,15 +5,15 @@
         $errors = [];
 
         if(empty($name)){
-            $errors[] = 'Votre nom doit être complété'; 
+            $errors[] = 'Veuillez remplir votre nom s\'il vout plaît'; 
         }
 
         if(empty($email)){
-            $errors[] = 'Votre email doit être complété';
+            $errors[] = 'Veuillez remplir votre email s\'il vout plaît';
         }
 
         if(empty($message)){
-            $errors[] = 'Votre message doit être complété';
+            $errors[] = 'Veuillez remplir votre message s\'il vout plaît';
         }
 
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -48,11 +48,11 @@
         <!-- Place favicon.ico in the root directory -->
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -87,12 +87,14 @@
                             <div class="alert alert-danger alert-dismissible" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 <?php foreach($errors as $error) : ?>
-                                    <p><?= $error; ?></p>
+                                    <p><strong>Attention ! </strong><?= $error; ?></p>
                                 <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
                 <?php endif; ?>
+            </div>
+
             <div class="container" id="contact-page">
             <!-- CONTENT -->
             <div class="row">
@@ -117,11 +119,11 @@
 
 
         <!-- SCRIPT -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
 
         <!-- Google Analytics -->
         <script>
