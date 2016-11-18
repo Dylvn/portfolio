@@ -100,7 +100,7 @@
                 </div>
                 <div class="col-md-7" id="form-contact">
                     <h2 class="text-center">Formulaire de contact</h2>
-                    <form action="">
+                    <form action="" method="post">
                         <label for="name">Votre nom :</label>
                         <input type="text" class="form-control" name="name" id="name">
                         <label for="email">Votre Email</label>
