@@ -1,3 +1,38 @@
+<?php
+    if(isset($_POST['submit'])){
+
+        extract($_POST);
+        $errors = [];
+
+        if(empty($name)){
+            $errors[] = 'Votre nom doit être complété'; 
+        }
+
+        if(empty($email)){
+            $errors[] = 'Votre email doit être complété';
+        }
+
+        if(empty($message)){
+            $errors[] = 'Votre message doit être complété';
+        }
+
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $errors[] = 'Votre email doit être valide';
+        }
+
+        if(empty($errors)){
+            $to = 'postmaster@trochain-dylan.fr';
+            $subject = 'PORTFOLIO - '. $name .' from '.$email;
+
+            mail($to, $subject, $message);
+
+        }
+
+    }
+
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -35,14 +70,28 @@
                             <li><a data-toggle="tab" href="formation.html">Formation</a></li>
                             <li><a data-toggle="tab" href="projects.html">Projects</a></li>
                             <li><a data-toggle="tab" href="skills.html">Skills</a></li>
-                            <li class="active"><a data-toggle="tab" href="contact.html">Contact</a></li>
+                            <li class="active"><a data-toggle="tab" href="contact.php">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <div class="container" id="contact-page">
+
+            <div class="container" id="contact-page">
+                <?php if(!empty($errors)) : ?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <?php foreach($errors as $error) : ?>
+                                    <p><?= $error; ?></p>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            <div class="container" id="contact-page">
             <!-- CONTENT -->
             <div class="row">
                 <div class="col-md-5">
