@@ -266,14 +266,15 @@ ul>li>span{
 
 /* SKILLS */
 
-#skillsRow1>div{
+#skillsRow1>div, #skillsRow2>div{
     margin-top: 20px;
     background-color:white;
     opacity: 0.8;
     border-radius:5px;
+    padding-bottom: 5px;
 }
 
-#skillsRow1>div>h2{
+#skillsRow1>div>h2,  #skillsRow2>div>h2{
     font-size:28px;
     font-family: impact;
     text-shadow: 5px 1px 1px #e7e7e7;
