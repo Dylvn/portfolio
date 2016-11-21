@@ -95,6 +95,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.nav-tabs {
+    border-bottom: 1px solid black;
+}
+
 body{
     background: url('../img/background.jpg');
 }
@@ -213,26 +217,21 @@ ul>li>span{
     margin-top:80px;
 }
 
-/*portfoliov1{
-    background-image: url('../img/portfoliov1.jpg');
-    background-size: 552px 345px;
-    width: 552px;
-    height: 345px;
+#portfoliov1{
+   background-color: #e7e7e7;
 }
 
 #blogRuby{
-    background-image: url('../img/blogRuby.jpg');
-    background-size: cover;
-    width: 552px;
-    height: 345px;
+   background-color: #e7e7e7;
 }
 
 #wordpress{
-    background-image: url('../img/wordpress.png');
-    background-size: 552px 345px;
-    width: 552px;
-    height: 345px;
-} */
+   background-color: #e7e7e7;
+}
+
+#comeandplay{
+    background-color: #e7e7e7;
+}
 
 #projectsRow1 :nth-child(1):hover{ 
     transition-duration:2s;
