@@ -1,4 +1,3 @@
-
         <div class="container" id="body-page">
             <div class="row">
                 <div class="col-md-offset-2 col-md-8" id="msg-about">
